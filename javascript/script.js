@@ -107,11 +107,20 @@ const tareaInput = document.querySelector("#tareaInput");
 const agregarBtn = document.querySelector("#agregarBtn");
 const listaTareas = document.querySelector("#listaTareas");
 
+//Array donde guardaremos tareas
+let tareas = [];
+
+// Guardar tareas en LocalStorage
+function guardarTareas() {
+    localStorage.setItem("tareas", JSON.stringify(tareas));
+}
+
+
 // Evento para agregar tareas
 agregarBtn.addEventListener("click", function() {
 
     // Guardamos el texto escrito
-    const tareaTexto = tareaInput.value;
+    const tareaTexto = tareaInput.value.trim();
 
     // Evita tareas vacías
     if (tareaTexto == "") {
@@ -123,7 +132,19 @@ agregarBtn.addEventListener("click", function() {
 
     tarea.textContent = tareaTexto;
 
-    // La agregamos al HTML
+    // No repetirse tareas
+    if (tareas.includes(tareaTexto)) {
+        alert("Esa tarea ya existe");
+        return;
+    }
+
+    // Guardar en array
+    tareas.push(tareaTexto);
+
+    // Guardar en LocalStorage
+    guardarTareas();
+
+    // Mostrar tarea
     listaTareas.appendChild(tarea);
 
     // Limpiamos el input
@@ -131,6 +152,22 @@ agregarBtn.addEventListener("click", function() {
 
 });
 
+// Obtener tareas guardadas
+const tareasGuardadas = localStorage.getItem("tareas");
+
+//Verificar si existen
+if (tareasGuardadas) {
+
+    // Convertir texto a array
+    tareas = JSON.parse(tareasGuardadas);
+
+    // Mostrar tareas
+    for (let i = 0; i < tareas.length; i++) {
+        const tarea = document.createElement("p");
+        tarea.textContent = tareas[i];
+        listaTareas.appendChild(tarea);
+    }
+}
 
 // ==========================================
 // PRODUCTOS DINÁMICOS
@@ -265,3 +302,58 @@ pokemonBtn.addEventListener("click", function() {
 });
 
 
+// ==========================
+// DARK MODE
+// ==========================
+const themeBtn = document.querySelector("#themeBtn");
+
+// Verificar tema guardado
+const temaGuardado = localStorage.getItem("tema");
+
+// Si existe dark mode guardado
+if (temaGuardado == "oscuro") {
+    document.body.classList.add("dark-mode");
+    themeBtn.textContent = "☀️ Modo Claro";
+}
+
+// Evento click
+themeBtn.addEventListener("click", function() {
+
+    // Agregar o quitar clase
+    document.body.classList.toggle("dark-mode");
+    
+    // Verificar tema activo
+    if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("tema", "oscuro");
+        themeBtn.textContent = "☀️ Modo Claro"
+
+    } else {
+        localStorage.setItem("tema", "claro");
+        themeBtn.textContent = "🌙 Modo Oscuro"
+    }
+
+})
+
+// ==========================
+// SCROLL ANIMATIONS
+// ==============================
+
+// Seleccionar elementos ocultos
+const hiddenElements = document.querySelectorAll(
+    ".hidden, .hidden-bottom, .hidden-slow, .hidden-scale"
+);
+
+// Observer
+const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+        // Si entra en pantalla
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    })
+})
+
+//Observar elementos
+hiddenElements.forEach(function(element) {
+    observer.observe(element);
+})

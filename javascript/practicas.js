@@ -476,3 +476,30 @@ let cursos = ["HTML", "CSS", "JavaScript"];
 cursos.splice(1, 1, "React");
 
 console.log(cursos);
+
+
+// Arrow Functions
+const saludarAlguien = (nombre) => {
+    return `Hola ${nombre}`;
+};
+console.log(saludarAlguien("Adriano"));
+
+// Template Strings
+const productoNombre = "Laptop";
+const precioProducto = 4500;
+
+console.log(`El producto ${productoNombre} cuesta S/ ${precioProducto}`);
+
+// Destructuring
+const pelicula = {
+    tituloPelicula: "Batman",
+    año: 2022,
+    genero: "Accion"
+};
+const { tituloPelicula, año, genero } = pelicula;
+console.log(`La pelicula ${tituloPelicula} salió en ${año}`);
+
+// Arrow function más corta
+const multiplicarModern = (a, b) => a * b;
+
+console.log(multiplicarModern(5, 4));

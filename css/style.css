@@ -450,7 +450,56 @@ section.card:hover {
 
 }
 
+/* =========================
+   SCROLL ANIMATIONS
+========================= */
 
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Proyectos desde abajo */
+.hidden-bottom {
+    opacity: 0;
+    transform: translateY(80px);
+    transition: all 1s ease;
+}
+
+/* Formulario lento */
+.hidden-slow {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 2.5s ease;
+}
+
+/* Estadísticas con zoom */
+.hidden-scale {
+    opacity: 0;
+    transform: scale(0.7);
+    transition: all 1.2s ease;
+}
+
+.hidden-scale.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.hidden-slow.show {
+    opacity: 1;
+    transform: translateY();
+}
+
+.hidden-bottom.show {
+    opacity: 1;
+    transform: translateY();
+}
 /* =========================
    FOOTER
 ========================= */
@@ -509,6 +558,87 @@ footer h3 {
 
 #pokemonInfo p {
     text-align: center;
+}
+
+/* ========================
+    DARK MODE
+============================ */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode nav {
+    background-color: rgba(20, 20, 20, 0.9);
+}
+
+.dark-mode section.card,
+.dark-mode .project-card,
+.dark-mode .stat-box,
+.dark-mode .contact-form,
+.dark-mode #productosDinamicos div {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.dark-mode p {
+    color: #ddd;
+}
+
+.dark-mode input,
+.dark-mode textarea {
+    background-color: #2a2a2a;
+    color: white;
+    border: 1px solid #555;
+}
+
+.dark-mode footer {
+    background-color: #111;
+}
+
+.dark-mode .nav-links a {
+    color: white;
+}
+
+.dark-mode .pokemon-card {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.dark-mode .pokemon-card p,
+.dark-mode .pokemon-card h3 {
+    color: white;
+}
+/* =========================
+    TEXTOS DARK MODE
+==========================*/
+.dark-mode .hero-info h2,
+.dark-mode .hero-info p,
+.dark-mode .stat-box p,
+.dark-mode .project-card p,
+.dark-mode .card p,
+.dark-mode .contact-form p,
+.dark-mode footer p {
+    color: #f1f1f1;
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3 {
+    color: white;
+}
+
+/* =========================
+    FONDO DARK MODE
+============================*/
+.dark-mode {
+    background: #121212;
+    color: white;
+}
+
+.dark-mode .hero-info p,
+.dark-mode .hero-info h2 {
+    color: white;
 }
 
 /* =========================
