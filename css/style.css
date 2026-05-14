@@ -493,12 +493,12 @@ section.card:hover {
 
 .hidden-slow.show {
     opacity: 1;
-    transform: translateY();
+    transform: translateY(0);
 }
 
 .hidden-bottom.show {
     opacity: 1;
-    transform: translateY();
+    transform: translateY(0);
 }
 /* =========================
    FOOTER
@@ -639,6 +639,77 @@ footer h3 {
 .dark-mode .hero-info p,
 .dark-mode .hero-info h2 {
     color: white;
+}
+
+/* =========================
+    BOTON DE WHATSAPP
+============================ */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    background-color: #25D366;
+    color: white;
+
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    font-size: 30px;
+
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.02);
+
+    transition: 0.3s;
+
+    animation: flotar 2s ease-in-out infinite;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    background-color: #3C3C3C;
+}
+
+/* ===========================
+    ANIMACION BOTON WHATSAPP
+=============================== */
+
+@keyframes flotar {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* ==============================
+    MENSAJE FORMULARIO
+================================= */
+#estadoMensaje {
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.exito {
+    color: #25D366;
+}
+
+.error {
+    color: red;
 }
 
 /* =========================

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <title>Mi primera página</title>
+        <title>Adriano | Desarrollador Web</title>
 
         <!-- Conexión con CSS -->
         <link rel="stylesheet" href="css/style.css">
-</head>
+        <link rel="icon" href="html/images/favicon.jpg">
+        <meta name="description" content="Desarrollador web que crea páginas modernas y rápidas para negocios">
+    </head>
 
 <body>
 <nav>
@@ -118,15 +120,17 @@
     
     <h2>Contáctame</h2>
 
-    <form>
+    <form id="formularioContacto">
 
-        <input type="text" placeholder="Tu nombre">
+        <input type="text" name="name" placeholder="Tu nombre">
 
-        <input type="email" placeholder="Tu correo">
+        <input type="email" name="email" placeholder="Tu correo">
 
-        <textarea placeholder="Escribe tu mensaje"></textarea>
+        <textarea name="message" placeholder="Escribe tu mensaje"></textarea>
 
         <button type="submit">Enviar mensaje</button>
+
+        <p id="estadoMensaje"></p>
 
     </form>
 
@@ -216,6 +220,12 @@
     <p> © 2026 - Todos los derechos reservados</p>
 </footer>
 
+<a href="https://wa.me/51962428150" class="whatsapp-btn">
+    💬
+</a>
+
+<!--AGREGAR EMAILJS-->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <!-- SCRIPTS JAVASCRIPT -->
 <script src="javascript/practicas.js"></script>
 <script src="javascript/script.js"></script>
