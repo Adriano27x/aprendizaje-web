@@ -6,6 +6,8 @@
         <!-- Conexión con CSS -->
         <link rel="stylesheet" href="css/style.css">
         <link rel="icon" href="html/images/favicon.jpg">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Desarrollador web que crea páginas modernas y rápidas para negocios">
     </head>
 
@@ -92,23 +94,37 @@
     </div>
 </div>
 
+<section class="card hidden">
+
+    <h2>Buscar proyecto</h2>
+
+    <div class="search-box">
+
+        <span>🔍</span>
+
+        <input type="text" id="buscadorProyectos" placeholder="Buscar proyecto...">
+    
+    </div>
+    
+</section>
+
 <!-- PROYECTOS -->
 <section class="projects hidden-bottom">
     <h2>Mis proyectos</h2>
 
     <div class="projects-grid">
 
-        <div class="project-card">
+        <div class="project-card" data-name="landing">
             <h3>Landing Page</h3>
             <p>Página moderna para negocios</p>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" data-name="portafolio">
             <h3>Portafolio Personal</h3>
             <p>Diseño limpio y adaptable.</p>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" data-name="tienda">
             <h3>Tienda Online</h3>
             <p>Proyecto práctico de ecommerce</p>
         </div>
@@ -203,6 +219,74 @@
     </button>
 
     <div id="pokemonInfo"></div>
+
+</section>
+
+<section class="card hidden">
+
+    <h2>Clima en tiempo real</h2>
+
+    <input type="text" id="climaInput" placeholder="Ejemplo: Lima">
+
+    <button id="climaBtn">
+        Buscar clima
+    </button>
+
+    <div id="climaInfo"></div>
+
+</section>
+
+<div id="loader" class="loader"></div>
+
+<section class="card hidden">
+
+    <h2>Preguntas frecuentes</h2>
+
+    <div class="faq">
+
+        <button class="faq-btn">
+            ¿Cuánto cuesta una página?
+        </button>
+
+        <p class="faq-text">
+            El precio depende del proyecto.
+        </p>
+
+    </div>
+
+    <div class="faq">
+
+        <button class="faq-btn">
+            ¿Cuánto demora?
+        </button>
+
+        <p class="faq-text">
+            Entre 3 y 7 días normalmente.
+        </p>
+        
+    </div>
+
+</section>
+
+<section class="card hidden">
+
+    <h2>Dashboard de tareas PRO</h2>
+
+    <div class="task-top">
+
+        <input type="text" id="taskInput" placeholder="Nueva tarea">
+
+        <button id="taskBtn">
+            Agregar
+        </button>
+
+    </div>
+
+    <p id="taskCounter">
+        Tareas: 0
+    </p>
+
+    <div id="taskList"></div>
 
 </section>
 

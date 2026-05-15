@@ -436,3 +436,269 @@ formulario.addEventListener("submit", function(e) {
     });
 
 });
+
+// ========================
+// BUSCADOR DE PROYECTOS
+// =========================
+const buscador = document.querySelector("#buscadorProyectos");
+const proyectos = document.querySelectorAll(".project-card");
+
+buscador.addEventListener("input", function() {
+    
+    const texto = buscador.value.toLowerCase();
+
+    proyectos.forEach(function(proyecto) {
+
+        const nombre = proyecto.dataset.name.toLowerCase();
+        const descripcion = proyecto.textContent.toLocaleLowerCase();
+
+        if (
+            nombre.includes(texto) ||
+            descripcion.includes(texto)
+        ) {
+            proyecto.style.display = "block";
+        } else {
+            proyecto.style.display = "none";
+        }
+    })
+})
+
+//=========================
+// LOADER
+// ========================
+const loader = document.querySelector("#loader");
+
+window.addEventListener("load", function() {
+
+    loader.style.opacity = "0";
+
+    setTimeout(() => {
+        loader.style.display = "none";
+    }, 500);
+});
+
+// ==========================
+// FAQ
+// ===========================
+const faqBtns = document.querySelectorAll(".faq-btn");
+
+faqBtns.forEach(function(btn) {
+
+    btn.addEventListener("click", function() {
+
+        const texto = btn.nextElementSibling;
+
+        texto.classList.toggle("active");
+
+        btn.classList.toggle("active");
+        
+    });
+});
+
+// ===========================
+// WEATHER APP
+// ===========================
+const climaInput = document.querySelector("#climaInput");
+const climaBtn = document.querySelector("#climaBtn");
+const climaInfo = document.querySelector("#climaInfo");
+
+const apiKey = "8cecc49f479b95eba8483dc2b4d3ecd4";
+
+// Evento click
+climaBtn.addEventListener("click", function() {
+
+    const ciudad = climaInput.value.trim();
+
+    // Validar vacío
+    if (ciudad == "") {
+
+        climaInfo.innerHTML = `
+            <p>⚠️ Escribe una ciudad</p>
+        `;
+
+        return;
+    }
+
+    // Loader
+    climaInfo.innerHTML = `
+            <p>⏳ Buscando clima...</p>
+    `;
+
+    // Consumir API
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}&units=metric&lang=es`)
+
+    .then(function(respuesta) {
+
+        if (!respuesta.ok) {
+            throw new Error("Ciudad no encontrada");
+        }
+
+        return respuesta.json();
+
+    })
+
+    .then(function(data) {
+
+        climaInfo.innerHTML = `
+            <div class="weather-card">
+
+                <h3>${data.name}, ${data.sys.country}</h3>
+
+                <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png">
+
+                <p>🌡️ Temperatura: ${data.main.temp}°C</p>
+
+                <p>☁️ Clima: ${data.weather[0].description}</p>
+
+                <p>💧 Humedad: ${data.main.humidity}%</p>
+
+            </div>
+        `;
+    })
+
+    .catch(function(error) {
+        
+        climaInfo.innerHTML = `
+            <p>❌ Ciudad no encontrada</p>
+        `;
+
+    })
+
+})
+
+// ============================
+//  TASK DASHBOARD PRO
+// ============================
+
+const taskInput = document.querySelector("#taskInput");
+const taskBtn = document.querySelector("#taskBtn");
+const taskList = document.querySelector("#taskList");
+const taskCounter = document.querySelector("#taskCounter");
+
+let taskArray = [];
+
+// Actualizar contador
+function updateCounter() {
+
+    if (taskArray.length == 0) {
+
+        taskCounter.textContent =
+            "No hay tareas";
+
+    } else if (taskArray.length == 1) {
+
+        taskCounter.textContent =
+            "1 tarea";
+
+    } else {
+
+    taskCounter.textContent =
+        `{taskArray.length} tareas`;
+
+    }
+}
+
+// Guardar localStorage
+function saveTasks() {
+
+    localStorage.setItem(
+        "taskDashboard",
+        JSON.stringify(taskArray)
+    );
+
+}
+
+// Renderizar tareas
+function renderTask() {
+
+    taskList.innerHTML = "";
+
+    taskArray.forEach(function(task, index) {
+
+        const div = document.createElement("div");
+
+        div.classList.add("task-item");
+
+        if (task.completed) {
+            div.classList.add("completed");
+        }
+
+        div.innerHTML =  `
+            <span>${task.text}</span>
+
+            <div class="task-actions">
+
+                <button onclick="completeTask(${index})">
+                    ✅
+                </button>
+
+            </div>
+        `;
+
+        taskList.appendChild(div);
+
+    });
+
+    updateCounter();
+
+}
+
+// Agregar tarea
+taskBtn.addEventListener("click", function() {
+
+    const text = taskInput.value.trim();
+
+    if (text == "") return;
+
+    taskArray.push({
+        text: text,
+        completed: false
+    });
+
+    saveTasks();
+    renderTask();
+
+    taskInput.value = "";
+
+});
+
+taskInput.addEventListener("keypress", function(e) {
+
+    if (e.key == "Enter") {
+        taskBtn.click();
+    }
+
+})
+
+// Completar tarea 
+function completeTask(index) {
+
+    taskArray[index].completed =
+        !taskArray[index].completed;
+
+    saveTasks();
+    renderTask();
+
+}
+
+// Eliminar tarea
+function deleteTask(index) {
+
+    taskArray.splice(index, 1);
+
+    saveTasks();
+    renderTask();
+
+}
+
+// Cargar tareas guardadas
+const savedTasks =
+    localStorage.getItem("taskDashboard");
+
+if (savedTasks) {
+
+    taskArray = JSON.parse(saveTasks);
+
+    renderTask();
+
+}
