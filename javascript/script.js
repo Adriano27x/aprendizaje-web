@@ -265,7 +265,7 @@ pokemonBtn.addEventListener("click", function() {
 
         // Verificar errores
         if (!respuesta.ok) {
-            throw new Error("Pokémon no encotrado");
+            throw new Error("Pokémon no encontrado");
         }
 
         return respuesta.json();
@@ -593,7 +593,7 @@ function updateCounter() {
     } else {
 
     taskCounter.textContent =
-        `{taskArray.length} tareas`;
+        `${taskArray.length} tareas`;
 
     }
 }
@@ -630,6 +630,10 @@ function renderTask() {
 
                 <button onclick="completeTask(${index})">
                     ✅
+                </button>
+
+                <button onclick="deleteTask(${index})">
+                    ❌
                 </button>
 
             </div>
@@ -697,7 +701,7 @@ const savedTasks =
 
 if (savedTasks) {
 
-    taskArray = JSON.parse(saveTasks);
+    taskArray = JSON.parse(savedTasks);
 
     renderTask();
 

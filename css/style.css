@@ -549,6 +549,18 @@ section.card:hover {
     background: transparent;
 }
 
+.dark-mode .search-box {
+    background-color: #1e1e1e;
+}
+
+.dark-mode .search-box input {
+    color: white;
+}
+
+.dark-mode .search-box input::placeholder {
+    color: #ccc;
+}
+
 /* =========================
     LOADER
 ============================= */
@@ -596,6 +608,7 @@ section.card:hover {
 ============================== */
 .faq {
     margin-top: 15px;
+    margin-bottom: 20px;
 }
 
 .faq-text {
@@ -617,6 +630,17 @@ section.card:hover {
     padding: 10px;
 }
 
+.faq-btn {
+    width: 100%;
+
+    text-align: left;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 20px;
+}
 .faq-btn.active {
     background-color: #174bb5;
 }
@@ -781,8 +805,8 @@ footer p {
 ============================ */
 .whatsapp-btn {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 30px;
+    right: 30px;
 
     background-color: #25D366;
     color: white;
@@ -1090,5 +1114,24 @@ footer p {
 
     .hero-info {
         padding: 40px 20px;
+    }
+
+    .whatsapp-btn {
+        width: 55px;
+        height: 55px;
+        font-size: 26px;
+
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .task-top {
+        flex-direction: column;
+    }
+
+    .task-top input,
+    .task-top button {
+        width: 100%;
+        box-sizing: border-box;
     }
 }
