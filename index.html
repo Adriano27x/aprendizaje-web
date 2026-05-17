@@ -9,22 +9,32 @@
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Desarrollador web que crea páginas modernas y rápidas para negocios">
-    </head>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
 
 <body>
+
 <nav>
     <h2>Adriano Developer</h2>
 
     <div class="nav-links">
-        <a href="#">Inicio</a>
-        <a href="#">Servicios</a>
-        <a href="#">Contacto</a>
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#contacto">Contacto</a>
+    </div>
+
+    <button id="themeBtn">🌙</button>
+
+    <div class="menu-toggle" id="menuToggle">
+        ☰
     </div>
 </nav>
 
-<button id="themeBtn">🌙 Modo Oscuro</button>
-
-<header>
+<header id="inicio">
     <h1>Creo páginas web modernas</h1>
     <p>Ayudo a negocios a crecer en internet con páginas rapidas y atractivas</p>
     <button class="main-btn">Solicitar mi página web</button>
@@ -58,13 +68,68 @@
 
 </section>
 
+<section class="services-section hidden">
+
+    <h2>Servicios Profesionales</h2>
+
+    <div class="services-grid">
+
+        <div class="service-card">
+            <div class="service-icon">💻</div>
+
+            <h3>Desarrollo Web</h3>
+
+            <p>
+                Creación de páginas modernas, rápidas y adaptadas a cualquier dispositivo.
+            </p>
+
+            <button>
+                Solicitar servicio 
+            </button>
+
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🎨</div>
+
+            <h3>Diseño UI/UX</h3>
+            
+            <p>
+                Interfaces modernas y atractivas enfocadas en mejorar la experiencia del usuario.
+            </p>
+
+            <button>
+                Ver más
+            </button>
+
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🚀</div>
+
+            <h3>Optimización Web</h3>
+
+            <p>
+                Mejoras de velocidad, rendimiento y posicionamiento para tu negocio.
+            </p>
+
+            <button>
+                Empezar
+            </button>
+
+        </div>
+        
+    </div>
+
+</section>
+
 <!-- CONTENEDOR PRINCIPAL -->
 <div class="container hidden">
 
     <!-- COLUMNA IZQUIERDA -->
     <div class="left">
 
-        <section class="card">
+        <section class="card" id="servicios">
             <h2>Servicios</h2>
             <p>Diseño de páginas web</p>
             <p>Landing pages</p>
@@ -115,24 +180,42 @@
     <div class="projects-grid">
 
         <div class="project-card" data-name="landing">
+            <img src="html/images/xd.png" alt="Landing page">
             <h3>Landing Page</h3>
             <p>Página moderna para negocios</p>
         </div>
 
         <div class="project-card" data-name="portafolio">
+            <img src="html/images/sa.png" alt="Portafolio personal">
             <h3>Portafolio Personal</h3>
             <p>Diseño limpio y adaptable.</p>
         </div>
 
         <div class="project-card" data-name="tienda">
+            <img src="html/images/preview.jpg" alt="Tienda online">
             <h3>Tienda Online</h3>
             <p>Proyecto práctico de ecommerce</p>
         </div>
     </div>
 </section>
 
+<section class="card hidden">
+
+    <h2>Tecnologías que utilizo</h2>
+
+    <div class="tech-grid">
+
+        <div class="tech">HTML</div>
+        <div class="tech">🔥 CSS</div>
+        <div class="tech">JavaScript</div>
+        <div class="tech">Responsive Design</div>
+
+    </div>
+
+</section>
+
 <!-- FORMULARIO -->
-<section class="contact-form hidden-slow">
+<section class="contact-form hidden-slow" id="contacto">
     
     <h2>Contáctame</h2>
 
@@ -149,55 +232,6 @@
         <p id="estadoMensaje"></p>
 
     </form>
-
-</section>
-
-<!-- SECCIONES JAVASCRIPT -->
-<section class="card hidden">
-    
-    <h2>Saludo personalizado</h2>
-
-    <input type="text" id="nombreInput" placeholder="Escribe tu nombre">
-
-    <button id="saludarBtn">Saludar</button>
-
-    <p id="mensaje"></p>
-    
-</section>
-
-<section class="card hidden">
-
-    <h2>Lista dinámica</h2>
-
-    <div id="lista"></div>
-
-</section>
-
-<section class="card hidden">
-    
-    <h2>Usuarios</h2>
-
-    <div id="usuariosLista"></div>
-
-</section>
-
-<section class="card hidden">
-
-    <h2>Productos</h2>
-
-    <div id="productosLista"></div>
-    
-</section>
-
-<section class="card hidden">
-
-    <h2>Lista de tareas</h2>
-
-    <input type="text" id="tareaInput" placeholder="Escribe una tarea">
-
-    <button id="agregarBtn">Agregar</button>
-
-    <div id="listaTareas"></div>
 
 </section>
 
