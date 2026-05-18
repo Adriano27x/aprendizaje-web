@@ -21,6 +21,8 @@ body {
     flex-direction: column;
 
     transition: all 0.4s ease;
+
+    padding-top: 70px;
 }
 
 h1,
@@ -63,15 +65,19 @@ nav {
     box-shadow: 0px 2px 10px rgba(0,0,0,0.05);
 
     /* Navbar fija */
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
+
     z-index: 1000;
 
     /* Efecto vidrio */
     backdrop-filter: blur(18px);
     background: rgba(255, 255, 255, 0.9);
 
-    transition: 0.4s ease;
+    transition: transform 0.4s ease, padding 0.4s ease;
+    box-sizing: border-box;
 }
 
 nav h2 {
@@ -151,7 +157,7 @@ header {
 
     padding: 80px 20px;
 
-    min-height: 70vh;
+    min-height: 72vh;
 
     display: flex;
     flex-direction: column;
@@ -1244,13 +1250,17 @@ footer p {
         justify-content: space-between;
         align-items: center;
         padding: 18px 20px;
-        position: relative;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
     }
 
     .nav-right {
         display: flex;
         align-items: center;
-        gap: 15px;
+        gap: 5px;
     }
 
     nav h2 {
