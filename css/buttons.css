@@ -17,7 +17,7 @@ button {
     font-weight: 600;
     font-size: 15px;
 
-    transition: all 0.3s ease;
+    transition: var(--transition);
 
     box-shadow: 0px 10px 20px rgba(37, 99, 235, 0.25);
 
@@ -42,7 +42,7 @@ button:hover {
     font-size: 17px;
     font-weight: 700;
 
-    border-radius: 18px;
+    border-radius: var(--radius-medium);
 
     background: linear-gradient(135deg, #2563eb, #4f46e5);
 

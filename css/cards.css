@@ -29,7 +29,7 @@ button {
 
     text-align: center;
 
-    transition: all 0.3s ease;
+    transition: var(--transition);
 }
 
 .stat-box:hover {
@@ -42,7 +42,7 @@ button {
 
 .stat-box h3 {
     font-size: 40px;
-    color: #1f6feb;
+    color: var(--primary);
 
     margin-bottom: 10px;
 }
@@ -92,7 +92,7 @@ section.card {
     margin: 50px 0;
     padding: 30px;
 
-    border-radius: 28px;
+    border-radius: var(--radius-large);
 
     text-align: left;
 
