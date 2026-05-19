@@ -1,0 +1,230 @@
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 767px) {
+
+    /* Navbar responsive */
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 20px;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    nav h2 {
+        font-size: 28px;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(15, 23, 42, 0.98);
+        display: flex;
+        flex-direction: column;
+        padding: 25px 0;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-10px);
+        transition: 0.3s ease;
+    }
+
+    .nav-links.active {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 30px;
+    }
+
+    .nav-links a {
+        color: white;
+        text-align: center;
+        font-size: 18px;
+        padding: 15px 0;
+    }
+
+    #themeBtn {
+        width: 42px;
+        height: 42px;
+        font-size: 18px;
+        flex-shrink: 0;
+    }
+    /* Container responsive */
+    .container {
+        display: flex;
+        flex-direction: column;
+
+        padding: 15px;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+        flex: none;
+    }
+
+    /* Cards responsive */
+    section.card {
+        width: 100%;
+
+        box-sizing: border-box;
+
+        margin: 15px 0;
+        padding: 20px;
+    }
+
+    /* Header responsive */
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        padding: 70px 20px;
+    }
+
+    header h1 {
+        font-size: 41px;
+        line-height: 1.1;
+    }
+
+    header p {
+        font-size: 18px;
+        max-width: 100%;
+    }
+
+    /* Botones responsive */
+    button {
+        width: 100%;
+    }
+
+    /* Hero responsive */
+    .hero-info h2 {
+        font-size: 24px;
+    }
+
+    .hero-info p {
+        font-size: 16px;
+    }
+
+    /* Proyectos responsive */
+    .projects-grid {
+        flex-direction: column;
+    }
+
+    /* Footer responsive */
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Formulario responsive */
+    .contact-form {
+        margin: 40px 15px;
+        padding: 20px;
+    }
+
+    /* Stats responsive */
+    .stats {
+        flex-direction: column;
+        padding: 20px 15px;
+    }
+
+    .projects {
+        padding: 20px 15px;
+    }
+
+    .project-card {
+        padding: 20px;
+    }
+
+    .hero-info {
+        padding: 40px 20px;
+    }
+
+    .whatsapp-btn {
+        width: 55px;
+        height: 55px;
+        font-size: 26px;
+
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .task-top {
+        flex-direction: column;
+    }
+
+    .task-top input,
+    .task-top button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .services-grid {
+        flex-direction: column;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-image img {
+        width: 88%;
+        max-width: 420px;
+    }
+
+}
+
+/* =========================
+   TABLET
+========================= */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .hero-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hero-text {
+        flex: 1;
+        text-align: left !important;
+    }
+
+    .hero-text h1,
+    .hero-text p,
+    .hero-text .main-btn,
+    .hero-status {
+        text-align: left;
+        margin-left: 0;
+    }
+
+    .hero-image {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+}

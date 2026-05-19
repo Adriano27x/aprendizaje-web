@@ -50,7 +50,7 @@ function renderTask() {
 
         const div = document.createElement("div");
 
-        div.classList.add("task-item glass-card");
+        div.classList.add("task-item", "glass-card");
 
         if (task.completed) {
             div.classList.add("completed");

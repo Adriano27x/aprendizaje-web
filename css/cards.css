@@ -1,0 +1,117 @@
+
+section.card,
+.project-card,
+.stat-box,
+.contact-form,
+footer,
+button {
+    transition: all 0.4s ease;
+}
+
+/* =========================
+   ESTADÍSTICAS
+========================= */
+
+.stats {
+    max-width: 1200px;
+
+    margin: auto;
+    padding: 20px 30px 50px;
+
+    display: flex;
+    gap: 20px;
+}
+
+.stat-box {
+    flex: 1;
+
+    padding: 30px;
+
+    text-align: center;
+
+    transition: all 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-10px);
+
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.15);
+
+    scale: 1.03;
+}
+
+.stat-box h3 {
+    font-size: 40px;
+    color: #1f6feb;
+
+    margin-bottom: 10px;
+}
+
+.stat-box p {
+    color: #555;
+    font-weight: 500;
+}
+
+
+/* =========================
+   CONTENEDOR PRINCIPAL
+========================= */
+
+.container {
+    max-width: 1200px;
+
+    margin: auto;
+    padding: 30px;
+
+    display: flex;
+    gap: 20px;
+
+    align-items: flex-start;
+
+    flex: 1;
+}
+
+.left {
+    flex: 2;
+}
+
+.right {
+    flex: 1;
+}
+
+
+/* =========================
+   TARJETAS
+========================= */
+
+section.card {
+    background: rgba(255,255,255,0.75);
+
+    backdrop-filter: blur(18px);
+
+    margin: 50px 0;
+    padding: 30px;
+
+    border-radius: 28px;
+
+    text-align: left;
+
+    border: 1px solid rgba(255,255,255,0.25);
+    
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.08);
+
+    transition: all 0.4s ease;
+
+    /* Efecto vidrio */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+section.card:hover {
+    transform: translateY(-14px);
+
+    box-shadow: 0px 25px 60px rgba(0,0,0,0.18);
+
+    border-color: rgba(27,99,235,0.25);
+}
+

@@ -1,0 +1,117 @@
+/* ========================
+    DARK MODE
+============================ */
+
+.dark-mode nav {
+    background-color: rgba(20, 20, 20, 0.9);
+}
+
+.dark-mode section.card,
+.dark-mode .project-card,
+.dark-mode .stat-box,
+.dark-mode .contact-form,
+.dark-mode #productosDinamicos div {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.dark-mode p {
+    color: #ddd;
+}
+
+.dark-mode input,
+.dark-mode textarea {
+    background-color: #2a2a2a;
+    color: white;
+    border: 1px solid #555;
+}
+
+.dark-mode footer {
+    background-color: #111;
+}
+
+.dark-mode .project-card {
+    transition: all 0.3s ease;
+}
+
+.dark-mode .project-card:hover {
+    background: linear-gradient(to bottom, #1e1e1e, #2c2c2c);
+}
+
+.dark-mode .nav-links a {
+    color: white;
+}
+
+.dark-mode .pokemon-card {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.dark-mode .pokemon-card p,
+.dark-mode .pokemon-card h3 {
+    color: white;
+}
+
+.dark-mode .service-card {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.dark-mode .service-card p {
+    color: #ddd;
+}
+
+/* =========================
+    TEXTOS DARK MODE
+==========================*/
+.dark-mode .hero-info h2,
+.dark-mode .hero-info p,
+.dark-mode .stat-box p,
+.dark-mode .project-card p,
+.dark-mode .card p,
+.dark-mode .contact-form p,
+.dark-mode footer p {
+    color: #f1f1f1;
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3 {
+    color: white;
+}
+
+/* ===========================
+    WEATHER APP
+=============================== */
+.dark-mode .weather-card {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+/* =========================    
+    TASK DASHBOARD
+========================= */
+
+.dark-mode .task-item {
+    background-color: #1e1e1e;
+}
+
+.dark-mode .task-item.completed {
+    background-color: #234423;
+}
+
+/* =========================
+    BUSCADOR
+============================ */
+
+.dark-mode .search-box {
+    background-color: #1e1e1e;
+}
+
+.dark-mode .search-box input {
+    color: white;
+}
+
+.dark-mode .search-box input::placeholder {
+    color: #ccc;
+}
