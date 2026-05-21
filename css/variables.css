@@ -14,9 +14,9 @@
     --light-gray: #dddddd;
 
     /* SOMBRAS */
-    --shadow-soft: 0px 5px 15px rgba(0, 0, 0, 0.08);
-    --shadow-medium: 0px 10px 30px rgba(0, 0, 0, 0.12);
-    --shadow-strong: 0px 25px 45px rgba(0, 0, 0, 0.20);
+    --shadow-soft: 0px 4px 15px rgba(0, 0, 0, 0.06);
+    --shadow-medium: 0px 8px 25px rgba(0, 0, 0, 0.10);
+    --shadow-strong: 0px 18px 40px rgba(0, 0, 0, 0.15);
 
     /* BORDES */
     --radius-small: 10px;

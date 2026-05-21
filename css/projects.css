@@ -36,11 +36,11 @@
 }
 
 .project-card:hover {
-    transform: translateY(-15px) scale(1.04);
+    transform: translateY(-10px);
 
     box-shadow: var(--shadow-strong);
 
-    background: linear-gradient(to bottom, white, #f5f9ff);
+    background: linear-gradient(to bottom, white, #f8fbff);
 }
 
 .project-card::after {
@@ -64,19 +64,83 @@
     opacity: 1;
 }
 
+.project-content {
+    padding-top: 10px;
+}
+
+.project-tag {
+    display: inline-block;
+
+    background: rgba(31,111,235,0.12);
+    color: var(--primary);
+
+    padding: 8px 14px;
+
+    border-radius: 999px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.project-card p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.project-btn {
+    width: auto;
+    padding: 12px 20px;
+}
+
 /* =========================
     IMAGENES PROJECT-CARD
 ==========================*/
 
 .project-card img {
     width: 100%;
-    height: 180px;
+    height: 240px;
     object-fit: cover;
     border-radius: var(--radius-small);
     margin-bottom: 15px;
-    transition: 0.4s ease;
     overflow: hidden;
     position: relative;
+    transition:
+    transform 0.5s ease,
+    filter 0.5s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+.project-card::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.25),
+        transparent 60%
+    );
+
+    opacity: 0;
+
+    transition: 0.4s ease;
+
+    z-index: 1;
+}
+
+.project-card:hover::before {
+    opacity: 1;
 }
 
 .tech-grid {
@@ -97,5 +161,5 @@
 
 .tech:hover {
     transform: translateY(-5px);
-    background-color: var(--primary-key);
+    background-color: var(--primary-dark);
 }

@@ -36,6 +36,14 @@ h2 {
     letter-spacing: 0.5px;
 }
 
+section h2 {
+    font-size: clamp(32px, 4vw, 42px);
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: -1px;
+}
+
 p {
     line-height: 1.6;
 }
@@ -45,6 +53,19 @@ img {
     border-radius: 8px;
 }
 
+/* =========================
+   LAYOUT GLOBAL
+========================= */
+
+.container,
+.projects,
+.services-section,
+.stats {
+    max-width: 1200px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
 
 .glass-card {
     background-color: white;

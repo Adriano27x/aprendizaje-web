@@ -24,6 +24,9 @@ header {
     align-items: center;
 
     isolation: isolate;
+
+    background-size: 200% 200%;
+    animation: gradientMove 12s ease infinite;
 }
 
 header h1 {
@@ -32,7 +35,7 @@ header h1 {
 
     line-height: 1.1;
 
-    max-width: 850px;
+    max-width: 700px;
 
     margin-bottom: 20px;
 
@@ -90,7 +93,8 @@ header button {
 
 .hero-text {
     flex: 1;
-    text-align: center;
+    text-align: left;
+    max-width: 580px;
 }
 
 .hero-image {
@@ -128,4 +132,20 @@ header button {
     100% {
         transform: translateY(0px);
     }
+}
+
+@keyframes gradientMove {
+
+    0% {
+        background-position: left top;
+    }
+
+    50% {
+        background-position: right bottom;
+    }
+
+    100% {
+        background-position: left top;
+    }
+
 }
