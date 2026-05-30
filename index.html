@@ -89,12 +89,12 @@
 <section class="stats hidden-scale">
 
     <div class="stat-box glass-card">
-        <h3>+20</h3>
+        <h3 class="counter" data-target="20">0</h3>
         <p>Proyectos realizados</p>
     </div>
 
     <div class="stat-box glass-card">
-        <h3>100%</h3>
+        <h3 class="counter" data-target="100">0</h3>
         <p>Clientes satisfechos</p>
     </div>
 
@@ -331,17 +331,60 @@
     
     <h2>Contáctame</h2>
 
-    <form id="formularioContacto">
+    <form id="formularioContacto" novalidate>
 
-        <input type="text" name="name" placeholder="Tu nombre">
+        <div class="input-group">
 
-        <input type="email" name="email" placeholder="Tu correo">
+            <input 
+                type="text"
+                name="name"
+                placeholder=" " 
+                required>
 
-        <textarea name="message" placeholder="Escribe tu mensaje"></textarea>
+            <label>Tu nombre</label>
+
+        </div>
+
+        <div class="input-group">
+
+            <input 
+                type="email"
+                name="email"
+                placeholder=" "
+                required>
+
+            <label>Tu correo</label>
+
+        </div>    
+
+        <div class="input-group">
+
+            <textarea
+                name="message"
+                placeholder=" "
+                required></textarea>
+
+            <label>Tu mensaje</label>
+
+        </div>
 
         <button type="submit">Enviar mensaje</button>
 
         <p id="estadoMensaje"></p>
+
+        <div id="successCard" class="success-card">
+
+            <div class="succes-icon">
+                ✓
+            </div>
+
+            <h3>Mensaje enviado</h3>
+
+            <p>
+                Te responderé lo antes posible.
+            </p>
+
+        </div>
 
     </form>
 
@@ -476,6 +519,7 @@
 <script src="javascript/tasks.js"></script>
 <script src="javascript/weather.js"></script>
 <script src="javascript/scroll-effects.js"></script>
+<script src="javascript/counters.js"></script>
 
 </body>
 </html>
