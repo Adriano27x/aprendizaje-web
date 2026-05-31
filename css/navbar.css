@@ -27,7 +27,7 @@ nav {
 
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 
-    transition: transform 0.4s ease, padding 0.4s ease;
+    transition: all 0.35s ease;
     box-sizing: border-box;
 }
 
@@ -87,9 +87,14 @@ nav h2 {
 }
 
 nav.scrolled {
-    padding: 10px 40px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.10);
+    padding: 12px 40px;
+
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.12);
     backdrop-filter: blur(20px);
+}
+
+nav.scrolled h2 {
+    transform: scale(0.95);
 }
 
 .nav-right {

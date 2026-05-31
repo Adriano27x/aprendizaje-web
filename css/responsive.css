@@ -60,6 +60,10 @@
         padding: 15px 0;
     }
 
+    .nav-links a:hover {
+    background: rgba(255,255,255,0.08);
+    }   
+
     #themeBtn {
         width: 42px;
         height: 42px;
@@ -90,6 +94,10 @@
         padding: 20px;
     }
 
+    section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
     /* Header responsive */
     header {
         flex-direction: column;
@@ -111,6 +119,7 @@
     /* Botones responsive */
     button {
         width: 100%;
+        min-height: 48px;
     }
 
     /* Hero responsive */
@@ -137,6 +146,11 @@
     .contact-form {
         margin: 40px 15px;
         padding: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 16px;
     }
 
     /* Stats responsive */
@@ -183,7 +197,7 @@
     .hero-container {
         flex-direction: column;
         text-align: center;
-        gap: 50px;
+        gap: 35px;
     }
 
     .hero-text {
@@ -196,6 +210,12 @@
         max-width: 420px;
     }
 
+    .hero-info h2,
+    .services-section h2,
+    .projects h2,
+    .contact-form h2 {
+        font-size: 28px;
+    }
 }
 
 /* =========================

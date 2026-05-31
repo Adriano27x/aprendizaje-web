@@ -39,7 +39,7 @@
 }
 
 .service-card:hover .service-icon {
-    transform: scale(1.15) rotate(5deg);
+    transform: scale(1.2) rotate(8deg);
 }
 
 .service-card::before {
@@ -56,7 +56,7 @@
 .service-icon {
     font-size: 55px;
     margin-bottom: 20px;
-    transition: 0.4s ease;
+    transition: 0.35s ease;
 }
 
 .service-card h3 {

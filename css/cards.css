@@ -112,3 +112,25 @@ section.card:hover {
      background: rgba(255,255,255,0.82);
 }
 
+.card,
+.project-card,
+.service-card,
+.stat-box {
+
+    transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+
+}
+
+.card:hover,
+.project-card:hover,
+.service-card:hover,
+.stat-box:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,0.12);
+
+}
