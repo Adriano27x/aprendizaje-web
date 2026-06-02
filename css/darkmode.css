@@ -166,3 +166,8 @@
     box-shadow:
     0 15px 35px rgba(37,99,235,0.35);
 }
+
+body.dark-mode .workflow-card{
+    background: rgba(20,20,20,0.75);
+    color: white;
+}

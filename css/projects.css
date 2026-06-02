@@ -105,8 +105,8 @@
 
 .project-card img {
     width: 100%;
-    height: 240px;
-    object-fit: cover;
+    height: 220px;
+    object-fit: contain;
     border-radius: var(--radius-small);
     margin-bottom: 15px;
     overflow: hidden;

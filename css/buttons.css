@@ -68,6 +68,11 @@ button:hover {
 ========================= */
 
 .main-btn {
+    display: inline-block;
+
+    text-decoration: none;
+    color: white;
+
     margin-top: 25px;
 
     padding: 18px 34px;

@@ -13,29 +13,3 @@ window.addEventListener("scroll", () => {
     }
 
 });
-
-const hiddenElements = document.querySelectorAll(
-    ".hidden, .hidden-bottom, .hidden-slow, .hidden-scale"
-);
-
-const observer = new IntersectionObserver((entries) => {
-
-    entries.forEach((entry) => {
-
-        if (entry.isIntersecting) {
-
-            entry.target.classList.add("show");
-
-        }
-
-    });
-
-}, {
-    threshold: 0.15
-});
-
-hiddenElements.forEach((element) => {
-
-    observer.observe(element);
-
-});

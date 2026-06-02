@@ -4,44 +4,49 @@ const counterObserver = new IntersectionObserver((entries) => {
 
     entries.forEach(entry => {
 
-        if (!entry.isIntersecting) return;
+        if (entry.isIntersecting) {
 
-        const counter = entry.target;
+            const counter = entry.target;
 
-        const target = +counter.dataset.target;
+            const target = Number(counter.dataset.target);
+            const suffix = counter.dataset.suffix || "";
 
-        let current = 0;
+            let current = 0;
 
-        const increment = target / 80;
+            const updateCounter = () => {
 
-        const updateCounter = () => {
+                const increment = target / 50;
 
-            current += increment;
+                if (current < target) {
 
-            if (current < target) {
+                    current += increment;
 
-                counter.textContent = Math.ceil(current);
+                    counter.textContent =
+                        Math.ceil(current) + suffix;
 
-                requestAnimationFrame(updateCounter);
+                    requestAnimationFrame(updateCounter);
 
-            } else {
+                } else {
 
-                counter.textContent = target;
+                    counter.textContent =
+                        target + suffix;
 
-            }
+                }
 
-        };
+            };
 
-        updateCounter();
+            updateCounter();
 
-        counterObserver.unobserve(counter);
+            counterObserver.unobserve(counter);
+
+        }
 
     });
 
+}, {
+    threshold: 0.5
 });
 
 counters.forEach(counter => {
-
     counterObserver.observe(counter);
-
 });

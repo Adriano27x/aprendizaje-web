@@ -56,19 +56,24 @@ button {
 /* =========================
    CONTENEDOR PRINCIPAL
 ========================= */
+.section-title{
+   text-align:center;
+    font-size:clamp(32px,4vw,42px);
+    font-weight:800;
+    margin-top:80px;
+    margin-bottom: 30px;
+}
 
 .container {
-    max-width: 1200px;
+    max-width: 900px;
 
     margin: auto;
-    padding: 30px;
+    padding: 10px 30px 30px;
 
     display: flex;
     gap: 20px;
 
-    align-items: flex-start;
-
-    flex: 1;
+    align-items: stretch;
 }
 
 .left {
@@ -79,6 +84,18 @@ button {
     flex: 1;
 }
 
+.left,
+.right{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.left .card,
+.right .card{
+    flex: 1;
+    margin: 0;
+}
 
 /* =========================
    TARJETAS
@@ -91,7 +108,7 @@ section.card {
 
     border-radius: 24px;
 
-    padding: 40px;
+    padding: 25px;
 
     border: 1px solid rgba(255,255,255,0.25);
 
