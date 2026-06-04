@@ -2,7 +2,7 @@
    RESPONSIVE
 ========================= */
 
-@media (max-width: 767px) {
+@media (max-width: 650px) {
 
     /* Navbar responsive */
     nav {
@@ -252,7 +252,7 @@
 /* =========================
    TABLET
 ========================= */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 651px) and (max-width: 1024px) {
 
     header {
         padding: 65px 20px;
@@ -334,4 +334,5 @@
         max-width:400px;
         margin:0 auto;
     }
+    
 }
