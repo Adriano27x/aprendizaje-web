@@ -21,28 +21,24 @@
 
 .project-card {
     flex: 1;
-
     padding: 25px;
-
-    border: 1px solid rgba(0,0,0,0.05);
-
+    background-color: #ffffff; /* Forzamos fondo blanco fijo */
+    border: 1px solid rgba(0, 0, 0, 0.08); /* Borde gris sutil premium */
     overflow: hidden;
-
-    transition: var(--transition);
-
+    transition: var(--transition), border-color 0.3s ease, background-color 0.3s ease; /* Transiciones fluidas */
     cursor: pointer;
-
     position: relative;
 }
 
 .project-card:hover {
     transform: translateY(-10px);
-
     box-shadow: var(--shadow-strong);
-
-    background: linear-gradient(to bottom, white, #f8fbff);
+    background: #ffffff; /* Quitamos el gradiente anterior y lo dejamos blanco */
+    background-color: #ffffff;
+    border-color: #163A9C; /* ¡El borde se vuelve rojo igual que en darkmode! */
 }
 
+/*
 .project-card::after {
     content: "";
 
@@ -63,6 +59,7 @@
 .project-card:hover::after {
     opacity: 1;
 }
+*/
 
 .project-content {
     padding-top: 10px;
@@ -121,6 +118,7 @@
     filter: brightness(1.05);
 }
 
+/*
 .project-card::before {
     content: "";
 
@@ -143,6 +141,7 @@
 .project-card:hover::before {
     opacity: 1;
 }
+*/
 
 .tech-grid {
     display: flex;

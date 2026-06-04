@@ -251,3 +251,16 @@ button:hover {
     }
 }
 
+/* ===================================================
+   BOTÓN EXCLUSIVO DEL FORMULARIO DE CONTACTO (ROJO)
+=================================================== */
+button.btn-formulario-rojo {
+    background: #225BE3 !important;
+    box-shadow: 0px 10px 20px rgba(32, 30, 198, 0.25) !important;
+    border-radius: 4px !important; /* Bordes más sutiles como en la imagen */
+}
+
+button.btn-formulario-rojo:hover {
+    box-shadow: 0px 15px 35px rgba(32, 30, 198, 0.25) !important;
+    filter: brightness(1.08) !important;
+}

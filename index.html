@@ -59,11 +59,11 @@
             <a href="#contacto" class="main-btn">
                 Solicitar proyecto
             </a>
-        
+        <!--
             <span class="hero-status">
              Disponible para nuevos proyectos 
             </span>
-
+        -->    
         </div>
 
         <div class="hero-image">
@@ -79,7 +79,7 @@
 <!-- INFORMACIÓN PRINCIPAL -->
 <section class="hero-info hidden fade-in">
     <h2>Soluciones web que generan confianza</h2>
-    <p>Diseño sitios web enfocados en transmitir profesionalismo, mejorar la presencia digitaly conectar con potenciales clientes.</p>
+    <p>Diseño sitios web enfocados en transmitir profesionalismo, mejorar la presencia digital y conectar con potenciales clientes.</p>
 </section>
 
 <!-- =========================
@@ -360,67 +360,81 @@
      CONTACTO
 ========================= -->
 <!-- FORMULARIO -->
-<section class="contact-form hidden-slow glass-card" id="contacto">
+<section class="contact-form hidden-slow" id="contacto">
     
     <h2>Contáctame</h2>
+    
+    <p class="contact-description-text">Estoy disponible para colaborar en nuevos proyectos web.
+            Completa el formulario o utiliza cualquiera de los medios de contacto.</p>
 
-    <form id="formularioContacto" novalidate>
+    <div class="contact-grid-main">
 
-        <div class="input-group">
-
-            <input 
-                type="text"
-                name="name"
-                placeholder=" " 
-                required>
-
-            <label>Tu nombre</label>
-
-        </div>
-
-        <div class="input-group">
-
-            <input 
-                type="email"
-                name="email"
-                placeholder=" "
-                required>
-
-            <label>Tu correo</label>
-
-        </div>    
-
-        <div class="input-group">
-
-            <textarea
-                name="message"
-                placeholder=" "
-                required></textarea>
-
-            <label>Tu mensaje</label>
-
-        </div>
-
-        <button type="submit">Enviar mensaje</button>
-
-        <p id="estadoMensaje"></p>
-
-        <div id="successCard" class="success-card">
-
-            <div class="success-icon">
-                ✓
+        <div class="contact-info-sidebar">
+            <div class="info-block-card">
+                <div class="icon-circle-red">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <div class="info-text-box">
+                    <h3>Ubicación</h3>
+                    <p>Lima, Perú</p>
+                </div>
             </div>
 
-            <h3>Mensaje enviado</h3>
+            <div class="info-block-card">
+                <div class="icon-circle-red">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <div class="info-text-box">
+                    <h3>WhatsApp</h3>
+                    <p>+51 962 428 150</p>
+                </div>
+            </div>
 
-            <p>
-                Te responderé lo antes posible.
-            </p>
-
+            <div class="info-block-card">
+                <div class="icon-circle-red">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div class="info-text-box">
+                    <h3>Email</h3>
+                    <p>chatoadri27@gmail.com</p>
+                </div>
+            </div>
         </div>
 
-    </form>
+        <form id="formularioContacto" class="contact-box-form" novalidate>
 
+            <div class="form-dual-row">
+                <div class="input-group">
+                    <input type="text" id="name" name="name" placeholder=" " required>
+                    <label for="name">Tu nombre</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="email" id="email" name="email" placeholder=" " required>
+                    <label for="email">Tu correo</label>
+                </div>    
+            </div>
+
+            <div class="input-group">
+                <textarea id="message" name="message" placeholder=" " required></textarea>
+                <label for="message">Tu mensaje</label>
+            </div>
+
+            <div class="form-submit-center">
+                <button type="submit" class="btn-formulario-rojo">Enviar mensaje</button>
+                
+                <p id="estadoMensaje"></p>
+
+                <div id="successCard" class="success-card">
+                    <div class="success-icon">✓</div>
+                    <h3>Mensaje enviado</h3>
+                    <p>Te responderé lo antes posible.</p>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
 </section>
 
 <!-- =========================
@@ -436,55 +450,54 @@
 
 <div id="loader" class="loader"></div>
 
-<section class="card hidden">
+<!-- =========================
+     PREGUNTAS FRECUENTES (FAQ)
+========================= -->
+<section class="faq-section-custom">
 
     <h2>Preguntas frecuentes</h2>
 
-    <div class="faq">
+    <div class="faq-container-block">
 
-        <button class="faq-btn">
-            ¿Cuánto cuesta una página?
-        </button>
+        <div class="faq-box">
+            <button class="faq-trigger">
+                ¿Cuánto cuesta una página?
+                <svg class="faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+            <div class="faq-panel">
+                <p>El precio depende del proyecto.</p>
+            </div>
+        </div>
 
-        <p class="faq-text">
-            El precio depende del proyecto.
-        </p>
+        <div class="faq-box">
+            <button class="faq-trigger">
+                ¿Cuánto demora?
+                <svg class="faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+            <div class="faq-panel">
+                <p>Entre 3 y 7 días normalmente.</p>
+            </div>
+        </div>
 
-    </div>
+        <div class="faq-box">
+            <button class="faq-trigger">
+                ¿La página será responsive?
+                <svg class="faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+            <div class="faq-panel">
+                <p>Sí. Todas las páginas se adaptan correctamente a computadoras, tablets y celulares.</p>
+            </div>
+        </div>
 
-    <div class="faq">
-
-        <button class="faq-btn">
-            ¿Cuánto demora?
-        </button>
-
-        <p class="faq-text">
-            Entre 3 y 7 días normalmente.
-        </p>
-        
-    </div>
-
-    <div class="faq">
-
-        <button class="faq-btn">
-            ¿La página será responsive?
-        </button>
-
-        <p class="faq-text">
-            Sí. Todas las páginas se adaptan correctamente a computadoras, tablets y celulares.
-        </p>
-
-    </div>
-
-    <div class="faq">
-
-        <button class="faq-btn">
-            ¿Incluyes soporte después de la entrega?
-        </button>
-
-        <p class="faq-text">
-            Sí. Brindo soporte para ajustes y consultas posteriores a la entrega del proyecto.
-        </p>
+        <div class="faq-box">
+            <button class="faq-trigger">
+                ¿Incluyes soporte después de la entrega?
+                <svg class="faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+            <div class="faq-panel">
+                <p>Sí. Brindo soporte para ajustes y consultas posteriores a la entrega del proyecto.</p>
+            </div>
+        </div>
 
     </div>
 

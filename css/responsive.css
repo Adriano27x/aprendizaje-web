@@ -61,7 +61,7 @@
     }
 
     .nav-links a:hover {
-    background: rgba(255,255,255,0.08);
+        background: rgba(255,255,255,0.08);
     }   
 
     #themeBtn {
@@ -70,11 +70,11 @@
         font-size: 18px;
         flex-shrink: 0;
     }
+
     /* Container responsive */
     .container {
         display: flex;
         flex-direction: column;
-
         padding: 15px;
     }
 
@@ -87,9 +87,7 @@
     /* Cards responsive */
     section.card {
         width: 100%;
-
         box-sizing: border-box;
-
         margin: 15px 0;
         padding: 20px;
     }
@@ -98,6 +96,7 @@
         padding-left: 20px;
         padding-right: 20px;
     }
+
     /* Header responsive */
     header {
         flex-direction: column;
@@ -142,16 +141,41 @@
         gap: 10px;
     }
 
-    /* Formulario responsive */
+    /* =======================================
+       NUEVO FORMULARIO RESPONSIVE (MÓVIL)
+    ======================================= */
     .contact-form {
-        margin: 40px 15px;
-        padding: 20px;
+        margin: 40px 15px !important;
+        padding: 0px !important; /* Resetea espaciados innecesarios */
     }
 
-    .contact-form input,
-    .contact-form textarea {
-        font-size: 16px;
+    .contact-description-text {
+        margin: -10px auto 35px auto;
+        font-size: 0.9rem;
     }
+
+    /* La rejilla pasa de 2 columnas a 1 sola columna vertical */
+    .contact-grid-main {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    /* Fila de inputs paralelos colapsa a uno debajo del otro */
+    .form-dual-row {
+        flex-direction: column !important;
+        gap: 24px !important;
+    }
+
+    .contact-box-form {
+        padding: 25px 20px !important; /* Ajuste interno de la caja en móviles */
+    }
+
+    .contact-box-form input,
+    .contact-box-form textarea {
+        font-size: 16px !important; /* Evita zoom automático en iOS */
+    }
+
+    /* ======================================= */
 
     /* Stats responsive */
     .stats {
@@ -167,7 +191,7 @@
         padding: 15px;
     }
 
-     .project-card img{
+    .project-card img{
         height: 150px;
     }
 
@@ -179,7 +203,6 @@
         width: 55px;
         height: 55px;
         font-size: 26px;
-
         right: 15px;
         bottom: 15px;
     }
@@ -221,7 +244,7 @@
         font-size: 28px;
     }
 
-     .workflow-grid{
+    .workflow-grid{
         grid-template-columns: 1fr;
     }
 }
@@ -268,6 +291,19 @@
         display: flex;
         justify-content: flex-end;
     }
+
+    /* =======================================
+       NUEVO FORMULARIO RESPONSIVE (TABLET)
+    ======================================= */
+    .contact-grid-main {
+        grid-template-columns: 1fr 1.5fr !important; /* Equilibrio de rejilla intermedio */
+        gap: 20px !important;
+    }
+    
+    .contact-box-form {
+        padding: 30px 25px !important;
+    }
+    /* ======================================= */
 
     .workflow-grid{
         grid-template-columns: repeat(2,1fr);

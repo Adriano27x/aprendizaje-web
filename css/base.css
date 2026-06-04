@@ -72,34 +72,116 @@ img {
     border-radius: 15px;
     box-shadow: 0px 10px 30px rgba(0,0,0,0.10);
 }
+/* ===================================================
+   FAQ - DISEÑO ANCHO, 100% TRANSPARENTE Y SIN SOMBRAS
+=================================================== */
 
-.faq-text{
+.faq-section-custom {
+    max-width: 1150px; 
+    margin: 70px auto;
+    padding: 0 30px;
+    box-sizing: border-box;
+    background: transparent !important;
+}
+
+.faq-section-custom h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
+
+.faq-container-block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    background: transparent !important;
+}
+
+/* El recuadro individual */
+.faq-box {
+    border: 1px solid #e2e8f0; 
+    border-radius: 12px; 
+    background: transparent !important; 
+    box-shadow: none !important; /* ELIMINA LA SOMBRA POR DEFECTO */
+    transition: border-color 0.3s ease;
+    overflow: hidden;
+}
+
+/* Botón disparador (La pregunta) */
+.faq-trigger {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent !important; 
+    border: none;
+    padding: 26px 32px; 
+    font-size: 1.15rem; 
+    font-weight: 600;
+    color: #1e293b;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    gap: 20px;
+    box-shadow: none !important; /* ELIMINA SOMBRAS EN EL BOTÓN */
+    transition: color 0.3s ease;
+}
+
+/* Icono de flecha (>) */
+.faq-chevron {
+    color: #64748b;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s ease;
+    flex-shrink: 0;
+}
+
+/* === EFECTO DESPLEGADO (ESTADO ACTIVO) === */
+
+/* Borde Coral (SIN SOMBRAS EXTRAÑAS) */
+.faq-box.active {
+    border-color: #225BE3 !important; 
+    box-shadow: none !important; /* ELIMINA CUALQUIER SOMBRA AZUL AL ACTIVARSE */
+}
+
+/* Texto de la pregunta Coral */
+.faq-box.active .faq-trigger {
+    color: #225BE3;
+    box-shadow: none !important;
+}
+
+/* Icono Coral (v) */
+.faq-box.active .faq-chevron {
+    transform: rotate(90deg);
+    color: #225BE3;
+}
+
+/* Contenedor de la respuesta */
+.faq-panel {
     max-height: 0;
     overflow: hidden;
-
-    opacity: 0;
-
-    transition: all 0.3s ease;
-
-    margin-top: 0;
+    background: transparent !important; 
+    box-shadow: none !important;
+    transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.faq-text.active{
-    max-height: 100px;
-
-    opacity: 1;
-
-    margin-top: 15px;
+.faq-panel p {
+    margin: 0;
+    padding: 0 32px 26px 32px; 
+    color: #475569;
+    font-size: 1.02rem;
+    line-height: 1.6;
 }
 
-.faq-btn{
-    width: 100%;
+/* ===================================================
+   EFECTO HOVER - CAMBIA A CORAL AL PASAR EL MOUSE
+=================================================== */
 
-    text-align: left;
+/* Cuando pasas el mouse por el recuadro, la pregunta y la flecha cambian a coral */
+.faq-box:hover .faq-trigger {
+    color: #225BE3;
+}
 
-    border: none;
-
-    cursor: pointer;
+.faq-box:hover .faq-chevron {
+    color: #225BE3;
 }
 
 .workflow{

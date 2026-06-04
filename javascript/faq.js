@@ -1,17 +1,21 @@
-// ==========================
-// FAQ
-// ===========================
-const faqBtns = document.querySelectorAll(".faq-btn");
+// ==========================================
+// CONTROL DESPLEGABLES FAQ (ANCHO E INTERACTIVO)
+// ==========================================
+const faqTriggers = document.querySelectorAll(".faq-trigger");
 
-faqBtns.forEach(function(btn) {
+faqTriggers.forEach(function(trigger) {
+    trigger.addEventListener("click", function() {
+        const faqBox = trigger.closest(".faq-box");
+        const faqPanel = trigger.nextElementSibling;
 
-    btn.addEventListener("click", function() {
+        // Alternamos la clase activa en el contenedor padre (.faq-box)
+        faqBox.classList.toggle("active");
 
-        const texto = btn.nextElementSibling;
-
-        texto.classList.toggle("active");
-
-        btn.classList.toggle("active");
-        
+        // Controlamos el colapso/despliegue de altura
+        if (faqBox.classList.contains("active")) {
+            faqPanel.style.maxHeight = faqPanel.scrollHeight + "px";
+        } else {
+            faqPanel.style.maxHeight = "0px";
+        }
     });
 });
