@@ -184,32 +184,76 @@ img {
     color: #225BE3;
 }
 
-.workflow{
-    max-width:1200px;
-    margin:80px auto;
-    padding:0 25px;
+/* ===================================================
+   WORKFLOW - ESTILO MINIMALISTA CON LÍNEAS SUPERIORES
+=================================================== */
+
+.workflow {
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 0 25px;
+    box-sizing: border-box;
 }
 
-.workflow-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
+/* Título de la sección alineado a la izquierda */
+.workflow h2 {
+    text-align: left !important;
+    font-size: clamp(34px, 4.5vw, 48px);
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 20px; /* Espacio antes de que empiece la cuadrícula */
+    color: var(--workflow-title);
+    transition: color 0.3s ease;
 }
 
-.workflow-card{
-    background:white;
-    border-radius:15px;
-    padding:25px;
-    text-align:center;
-    box-shadow:0px 10px 30px rgba(0,0,0,.10);
+.workflow-description {
+    text-align: left;
+    font-size: 1.1rem; /* Tamaño intermedio ideal para lectura */
+    line-height: 1.5;
+    width: 100%;
+    max-width: none;   
+    margin: 0 0 65px 0; /* Deja los 55px de espacio libre justo antes de que inicien las líneas de los pasos */
+   color: #94a3b8;
+    transition: color 0.3s ease;
 }
 
-.workflow-card span{
-    font-size:2rem;
-    font-weight:800;
-    color:var(--primary);
+.workflow-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
 }
 
-.workflow-card h3{
-    margin-top:15px;
+/* Tarjeta completamente plana, sin fondo blanco ni sombras */
+.workflow-card {
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 25px 0 0 0; /* Espaciado interno superior */
+    border-top: 1px solid rgba(22, 58, 156, 1); /* Línea sutil horizontal superior */
+    text-align: left; /* Todo el texto alineado a la izquierda */
+}
+
+/* Selecciona el <span> numérico sin necesidad de añadirle una clase en el HTML */
+.workflow-card > span {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #94a3b8;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+}
+
+/* Título del paso (Análisis, Diseño...) */
+.workflow-card h3 {
+    font-size: 1.45rem;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+}
+
+/* Descripción del paso */
+.workflow-card p {
+    font-size: 0.95rem;
+    color: #94a3b8;
+    line-height: 1.6;
+    margin: 0;
 }

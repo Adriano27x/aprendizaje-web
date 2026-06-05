@@ -17,7 +17,7 @@ body.dark-mode {
 }
 
 .dark-mode section.card,
-.dark-mode .stat-box,
+
 .dark-mode .contact-form,
 .dark-mode #productosDinamicos div {
     background-color: #1e1e1e;
@@ -75,16 +75,6 @@ body.dark-mode {
     color: white;
 }
 
-.dark-mode .pokemon-card {
-    background-color: #1e1e1e;
-    color: white;
-}
-
-.dark-mode .pokemon-card p,
-.dark-mode .pokemon-card h3 {
-    color: white;
-}
-
 .dark-mode .service-card {
     background-color: #1e1e1e;
     color: white;
@@ -99,7 +89,6 @@ body.dark-mode {
 ==========================*/
 .dark-mode .hero-info h2,
 .dark-mode .hero-info p,
-.dark-mode .stat-box p,
 .dark-mode .project-card p,
 .dark-mode .card p,
 .dark-mode .contact-form p,
@@ -111,42 +100,6 @@ body.dark-mode {
 .dark-mode h2,
 .dark-mode h3 {
     color: white;
-}
-
-/* ===========================
-    WEATHER APP
-=============================== */
-.dark-mode .weather-card {
-    background-color: #1e1e1e;
-    color: white;
-}
-
-/* =========================    
-    TASK DASHBOARD
-========================= */
-
-.dark-mode .task-item {
-    background-color: #1e1e1e;
-}
-
-.dark-mode .task-item.completed {
-    background-color: #234423;
-}
-
-/* =========================
-    BUSCADOR
-============================ */
-
-.dark-mode .search-box {
-    background-color: #1e1e1e;
-}
-
-.dark-mode .search-box input {
-    color: white;
-}
-
-.dark-mode .search-box input::placeholder {
-    color: #ccc;
 }
 
 .dark-mode .input-group label {
@@ -255,4 +208,30 @@ body.dark-mode .workflow-card{
 
 .dark-mode .faq-box.active .faq-chevron {
     color: #225BE3;
+}
+
+/* ===================================================
+   ADAPTACIÓN PREMIUM: STAT BOXES EN MODO OSCURO
+   =================================================== */
+.dark-mode .stat-box {
+    /* Fondo idéntico al de tus proyectos (Fondo de tu web #030303) */
+    background: #030303 !important;
+    background-color: #030303 !important;
+    
+    /* El borde premium sutil de tu segunda captura */
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    
+    box-shadow: none !important;
+}
+
+.dark-mode .stat-box h3 {
+    /* El número pasa a blanco puro con el grosor estilizado fino */
+    color: #ffffff !important;
+    font-weight: 300 !important;
+}
+
+.dark-mode .stat-box p {
+    /* El texto de la descripción pasa a un gris claro suave legible */
+    color: #a8a8a8 !important;
+    font-weight: 300 !important;
 }
