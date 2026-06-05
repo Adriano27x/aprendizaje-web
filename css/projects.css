@@ -143,27 +143,88 @@
 }
 */
 
-.tech-grid {
+/* =========================
+   HABILIDADES Y TECNOLOGÍAS (CARRUSEL MARQUEE - CORREGIDO)
+========================= */
+
+.tech-marquee-section {
+    width: 100%;
+    padding: 40px 0 0 0; /* Aumentamos el padding para dar aire */
+    overflow: visible !important; /* Forzamos a que nada en esta sección se corte */
     display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-top: 20px;
+    flex-direction: column; /* Alinea el h2 arriba y el carrusel abajo */
+    align-items: center;
 }
 
-.tech {
-    background-color: var(--primary);
-    color: white;
-    padding: 12px 18px;
-    border-radius: var(--radius-small);
-    font-weight: bold;
-    transition: 
-    transform 0.25s ease,
-    background-color 0.25s ease,
-    box-shadow 0.25s ease;
+.tech-marquee-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    width: 100%;
+    display: block;
+    clear: both; /* Evita interferencias de elementos flotantes anteriores */
 }
 
-.tech:hover {
-    transform: translateY(-4px);
-    background-color: var(--primary-dark);
-    box-shadow: 0 12px 30px rgba(31,111,235,0.25);
+/* El contenedor que oculta los elementos que se salen de la pantalla */
+.marquee-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+    
+    /* SOLUCIÓN: Limitamos el ancho para que no sea infinito */
+    width: 100%;
+    max-width: 1200px; /* Se acopla al mismo ancho de tu cuadrícula de proyectos */
+    margin: 15px auto 0 auto; /* Centra el carrusel horizontalmente */
+    
+    position: relative;
+    mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+}
+
+/* La pista/riel que moverá los elementos uno tras otro en bucle */
+.marquee-track {
+    display: inline-flex;
+    flex-direction: row; /* Forzamos explícitamente la dirección en fila */
+    flex-wrap: nowrap;   /* Evitamos a toda costa que se vaya hacia abajo */
+    gap: 20px; 
+    width: max-content;
+    animation: scrollMarquee 25s linear infinite; 
+}
+
+/* Diseño individual de cada burbuja */
+.tech-item {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 22px;
+    background-color: transparent; 
+    color: #333333;
+    border: 1px solid rgba(115, 206, 23, 0.08); 
+    border-radius: 999px; 
+    white-space: nowrap; /* Crucial: no permite saltos de línea internos */
+    display: inline-block; /* Se comporta como elemento en línea protegido */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover interactivo */
+.tech-item:hover {
+    border-color: #163A9C; 
+    color: #163A9C;
+}
+
+/* Pausa el carrusel con el mouse encima */
+.marquee-wrapper:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+/* =========================
+   ANIMACIÓN DEL CARRUSEL
+========================= */
+@keyframes scrollMarquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); 
+    }
 }

@@ -31,11 +31,14 @@
     transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
+
+    border: 1px solid #e2e8f0;
 }
 
 .service-card:hover {
     transform: translateY(-12px);
     box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.18);
+    border-color: #163A9C !important;
 }
 
 .service-card:hover .service-icon {

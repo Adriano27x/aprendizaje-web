@@ -13,6 +13,12 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+        <!-- CDN de la tipografía Satoshi (Títulos Premium) -->
+        <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet">
+
+        <script src="https://unpkg.com/lucide@latest"></script>
+
+        <!-- Tu fuente Inter para bloques de texto y párrafos -->
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
@@ -43,34 +49,20 @@
 </nav>
 
 <!-- =========================
-     HEADER
+     HEADER (TEXTO CENTRADO PREMIUM)
 ========================= -->
 <header>
-
     <div class="hero-container">
         <div class="hero-text">
-
             <h1>Diseño y desarrollo páginas web modernas</h1>
-
             <p>
                 Ayudo a empresas y profesionales a destacar en internet mediante sitios web rápidos, atractivos y optimizados para cualquier dispositivo.
             </p>
-        
             <a href="#contacto" class="main-btn">
                 Solicitar proyecto
             </a>
-        <!--
-            <span class="hero-status">
-             Disponible para nuevos proyectos 
-            </span>
-        -->    
-        </div>
-
-        <div class="hero-image">
-            <img src="html/images/mockup.png" alt="Mockup web">
         </div>
     </div>
-
 </header>
 
 <!-- =========================
@@ -116,7 +108,9 @@
     <div class="services-grid">
 
         <div class="service-card glass-card">
-            <div class="service-icon">💻</div>
+            <div class="service-icon">
+                <i data-lucide="tablet-smartphone"></i>
+            </div>
 
             <h3>Desarrollo Web</h3>
 
@@ -127,7 +121,9 @@
         </div>
 
         <div class="service-card glass-card">
-            <div class="service-icon">🎨</div>
+            <div class="service-icon">
+                <i data-lucide="layers"></i>
+            </div>
 
             <h3>Diseño UI/UX</h3>
             
@@ -138,7 +134,9 @@
         </div>
 
         <div class="service-card glass-card">
-            <div class="service-icon">🚀</div>
+            <div class="service-icon">
+                <i data-lucide="gauge"></i>
+            </div>
 
             <h3>Optimización Web</h3>
 
@@ -210,6 +208,39 @@
 
         </div>
 
+    </div>
+
+</section>
+
+<!-- =========================
+     NUEVA SECCIÓN: MARQUEE DE HABILIDADES
+========================= -->
+<section class="tech-marquee-section">
+    
+    <h2>Habilidades y Tecnologías</h2>
+
+    <div class="marquee-wrapper">
+        <div class="marquee-track">
+            <!-- Bloque Original -->
+            <div class="tech-item">HTML5 / CSS3</div>
+            <div class="tech-item">JavaScript (ES6+)</div>
+            <div class="tech-item">Bootstrap</div>
+            <div class="tech-item">Responsive Design</div>
+            <div class="tech-item">Fundamentos UI / UX</div>
+            <div class="tech-item">Git & GitHub</div>
+            <div class="tech-item">Integración de APIs</div>
+            <div class="tech-item">Lucide Icons</div>
+            
+            <!-- Bloque Espejo (Duplicado idéntico para que el bucle sea infinito) -->
+            <div class="tech-item">HTML5 / CSS3</div>
+            <div class="tech-item">JavaScript (ES6+)</div>
+            <div class="tech-item">Bootstrap</div>
+            <div class="tech-item">Responsive Design</div>
+            <div class="tech-item">Fundamentos UI / UX</div>
+            <div class="tech-item">Git & GitHub</div>
+            <div class="tech-item">Integración de APIs</div>
+            <div class="tech-item">Lucide Icons</div>
+        </div>
     </div>
 
 </section>
@@ -340,25 +371,6 @@
 </section>
 
 <!-- =========================
-     CARD
-========================= -->
-<section class="card hidden">
-
-    <h2>Tecnologías que utilizo</h2>
-
-    <div class="tech-grid">
-
-        <div class="tech">HTML5</div>
-        <div class="tech">CSS3</div>
-        <div class="tech">JavaScript</div>
-        <div class="tech">Responsive Design</div>
-        <div class="tech">Git & GitHub</div>
-
-    </div>
-
-</section>
-
-<!-- =========================
      CONTACTO
 ========================= -->
 <!-- FORMULARIO -->
@@ -438,17 +450,6 @@
 
     </div>
 </section>
-
-<!-- =========================
-     CARD
-========================= -->
-<!--<section class="card hidden">
-    <h2>Productos dinámicos</h2>
-
-    <div id="productosDinamicos"></div>
-
-</section>
--->
 
 <div id="loader" class="loader"></div>
 
@@ -539,14 +540,13 @@
 <script src="javascript/faq.js"></script>
 <script src="javascript/loader.js"></script>
 <script src="javascript/navbar.js"></script>
-
-
-
-
-
 <script src="javascript/scroll-effects.js"></script>
 <script src="javascript/counters.js"></script>
 <script src="javascript/ripple.js"></script>
+
+<script>
+  lucide.createIcons();
+</script>
 
 </body>
 </html>

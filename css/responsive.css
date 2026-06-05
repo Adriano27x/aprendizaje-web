@@ -304,40 +304,41 @@
 
     header {
         padding: 65px 20px;
+        text-align: center; /* Asegura el centrado en el bloque padre */
     }
+    
     header h1 {
         font-size: 50px;
         line-height: 1.1;
+        margin-left: auto;  /* Centra el bloque del h1 */
+        margin-right: auto;
     }
 
     header p {
         font-size: 18px;
-        max-width: 100%;
+        max-width: 650px;   /* Mantiene el bloque contenido para que no se desparrame */
+        margin-left: auto;  /* Centra el bloque del párrafo */
+        margin-right: auto;
     }
 
     .hero-container {
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column;   /* Cambiado a columna para centrarse verticalmente */
+        justify-content: center;  /* Centrado absoluto */
         align-items: center;
+        max-width: 950px;
     }
 
     .hero-text {
         flex: 1;
-        text-align: left !important;
+        text-align: center !important; /* Forzamos el centrado de los textos */
+        max-width: 800px;
     }
 
     .hero-text h1,
     .hero-text p,
     .hero-text .main-btn,
     .hero-status {
-        text-align: left;
-        margin-left: 0;
-    }
-
-    .hero-image {
-        flex: 1;
-        display: flex;
-        justify-content: flex-end;
+        text-align: center !important; /* Alineación de texto e hijos al centro */
     }
 
     /* =======================================
@@ -419,7 +420,7 @@
     }
 
     .studio-stats .stat-box {
-       flex: none !important;
+        flex: none !important;
         width: 214px !important;       /* Tus 2.7 cm de ancho */
         min-height: 172px !important;  /* Tus 2.2 cm de largo */
         

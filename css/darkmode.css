@@ -75,9 +75,21 @@ body.dark-mode {
     color: white;
 }
 
+/* ===================================================
+   TARJETAS DE SERVICIOS - TRANSPARENTE PREMIUM
+=================================================== */
 .dark-mode .service-card {
-    background-color: #1e1e1e;
+    background: transparent !important; /* ¡Aquí se vuelve transparente! */
+    background-color: transparent !important; 
     color: white;
+    /* Le aplicamos el borde sutil que querías */
+    border: 1px solid rgba(255, 255, 255, 0.08) !important; 
+    transition: all 0.4s ease;
+}
+
+/* Estado Hover: Cuando pasas el mouse encima */
+.dark-mode .service-card:hover {
+    border-color:#163A9C !important; 
 }
 
 .dark-mode .service-card p {

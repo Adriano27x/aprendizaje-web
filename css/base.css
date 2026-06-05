@@ -12,7 +12,7 @@ body {
 }
 
 body {
-    background: linear-gradient(to bottom, var(--background), var(--background));
+    background: #f8fafc;
     font-family: 'Inter', sans-serif;
     margin: 0;
 
@@ -30,18 +30,23 @@ body.dark-mode {
 }
 
 h1,
+h2,
+h3 {
+    font-family: 'Satoshi', sans-serif;
+    letter-spacing: -0.03em; /* Ajuste premium: junta las letras sutilmente */
+}
+
+h1,
 h2 {
     margin-bottom: 10px;
     font-weight: 700;
-    letter-spacing: 0.5px;
 }
 
 section h2 {
     font-size: clamp(32px, 4vw, 42px);
-    font-weight: 800;
+    font-weight: 900;
     text-align: center;
     margin-bottom: 40px;
-    letter-spacing: -1px;
 }
 
 p {
