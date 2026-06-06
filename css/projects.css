@@ -22,12 +22,15 @@
 .project-card {
     flex: 1;
     padding: 25px;
-    background-color: #ffffff; /* Forzamos fondo blanco fijo */
-    border: 1px solid rgba(0, 0, 0, 0.08); /* Borde gris sutil premium */
+    background-color: #ffffff; 
+    border: 1px solid rgba(0, 0, 0, 0.08); 
     overflow: hidden;
-    transition: var(--transition), border-color 0.3s ease, background-color 0.3s ease; /* Transiciones fluidas */
+    transition: var(--transition), border-color 0.3s ease, background-color 0.3s ease; 
     cursor: pointer;
     position: relative;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
@@ -63,6 +66,10 @@
 
 .project-content {
     padding-top: 10px;
+
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .project-tag {
@@ -79,6 +86,7 @@
     font-weight: 700;
 
     margin-bottom: 15px;
+    align-self: flex-start;
 }
 
 .project-card h3 {
@@ -94,6 +102,9 @@
 .project-btn {
     width: auto;
     padding: 12px 20px;
+
+    margin-top: auto; 
+    align-self: flex-start;
 }
 
 /* =========================

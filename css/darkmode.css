@@ -89,7 +89,7 @@ body.dark-mode {
 
 /* Estado Hover: Cuando pasas el mouse encima */
 .dark-mode .service-card:hover {
-    border-color:#163A9C !important; 
+    border-color:#163A9C !important; /* El borde se ilumina un poquito */
 }
 
 .dark-mode .service-card p {
@@ -246,4 +246,26 @@ body.dark-mode .workflow-card{
     /* El texto de la descripción pasa a un gris claro suave legible */
     color: #a8a8a8 !important;
     font-weight: 300 !important;
+}
+
+/* ===================================================
+   TARJETAS - TRANSPARENCIA, NUEVO BORDE Y REDUCCIÓN
+=================================================== */
+.dark-mode .container section.card {
+    background: transparent !important; /* Fondo 100% transparente sin capas blancas */
+    backdrop-filter: none !important;    
+    -webkit-backdrop-filter: none !important;
+    
+    border-radius: 20px; 
+    padding: 20px 22px;  
+    
+    border: 1px solid rgba(255, 255, 255, 0.05) !important; /* Tu borde exacto de darkmode */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.02); 
+}
+
+/* Hover Modo Oscuro */
+.dark-mode .container section.card:hover {
+    transform: translateY(-6px);
+    border-color: #1f6feb !important; /* Tu azul eléctrico de darkmode */
+    background: transparent !important;
 }

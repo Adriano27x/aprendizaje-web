@@ -20,7 +20,8 @@
     .nav-right {
         display: flex;
         align-items: center;
-        gap: 5px;
+        gap: 18px;
+        margin-right: -4px;
     }
 
     nav h2 {
@@ -50,7 +51,9 @@
 
     .menu-toggle {
         display: block;
-        font-size: 30px;
+        font-size: 26px; /* Ajuste sutil para equilibrar tamaño con la Luna */
+        line-height: 1;
+        cursor: pointer;
     }
 
     .nav-links a {
@@ -65,10 +68,17 @@
     }   
 
     #themeBtn {
-        width: 42px;
-        height: 42px;
-        font-size: 18px;
+        width: auto !important;
+        height: auto !important;
+        background: transparent !important;
+        border: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
         flex-shrink: 0;
+
+        /* Evita que ripple.js genere el círculo transparente al tocar en móviles */
+        pointer-events: auto !important;
+        -webkit-tap-highlight-color: transparent !important; /* Elimina el destello azul de iOS/Android */
     }
 
     /* Container responsive */
@@ -237,9 +247,14 @@
     .about-studio-container {
         flex-direction: column !important;
         text-align: center !important;
-        margin: 40px auto !important;
+        margin: 20px auto 0px auto !important;
         padding: 20px 15px !important;
-        gap: 35px !important;
+        gap: 15px !important;
+    }
+
+    .services-section {
+        margin: 0 auto auto auto !important;
+        padding-top: 20px !important;
     }
 
     .studio-info {
@@ -388,9 +403,16 @@
     .about-studio-container {
         flex-direction: column !important; /* Pone el texto arriba y tarjetas abajo */
         text-align: left !important;
-        margin: 40px auto !important;
+        margin: 20px auto 0px auto !important;
         padding: 20px 30px !important;
-        gap: 25px !important;
+        gap: 10px !important;
+    }
+
+    .services-section {
+        /* IGUAL QUE EN PC: Forzamos margen superior en 0 */
+        margin: 0 auto auto auto !important;
+        /* IGUAL QUE EN PC: Reducimos el padding superior a 20px */
+        padding-top: 20px !important;
     }
 
     .studio-info {

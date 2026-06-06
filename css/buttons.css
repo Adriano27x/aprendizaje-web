@@ -126,48 +126,93 @@ button:hover {
     left: 120%;
 }
 
-/* =========================
-   BOTON DARK MODE
-========================= */
-
+/* ===================================================
+   BOTÓN DARK MODE (MINIMALISTA ABSOLUTO)
+   =================================================== */
 #themeBtn {
-    width: 45px;
-    height: 45px;
-
-    border-radius: 50%;
-    padding: 0;
-
-    display: flex;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    
+    display: inline-flex !important;
     justify-content: center;
     align-items: center;
-
-    font-size: 18px;
-
-    background: transparent !important;
-    border: none;
-
-    box-shadow: none !important;
-
-    position: static;
-    overflow: visible;
-
-    transition: 0.3s ease;
+    
+    cursor: pointer;
+    position: relative;
+    overflow: visible !important;
+    
+    /* Desactivamos animaciones de salto heredadas */
+    transform: none !important;
+    transition: none !important;
+    
+    /* Evita que ripple.js intercepte el toque y dibuje círculos */
+    pointer-events: auto;
 }
 
-#themeBtn:hover {
-    transform: scale(1.08);
-    box-shadow: none !important;
-    background: transparent !important;
+/* Fuerza a que los componentes hijos ignoren efectos visuales globales */
+#themeBtn * {
+    pointer-events: none !important;
 }
 
-.dark-mode #themeBtn:hover {
-    background: transparent;
+/* Estilo y tamaño de los iconos vectoriales */
+#themeBtn svg {
+    width: 22px;
+    height: 22px;
+    stroke-width: 2px;
+    display: block;
+    transition: none !important; /* Cambio instantáneo y seco sin retrasos */
+}
+
+/* Control estricto de visibilidad */
+#themeBtn .icon-sun {
+    display: none;
+    stroke: #ffffff; /* Color en modo oscuro */
+}
+
+#themeBtn .icon-moon {
+    display: block;
+    stroke: #0f172a; /* Color en modo claro */
+}
+
+/* Cambios inmediatos al activar .dark-mode */
+.dark-mode #themeBtn .icon-moon {
+    display: none !important;
+}
+
+.dark-mode #themeBtn .icon-sun {
+    display: block !important;
+}
+
+/* Anulamos por completo cualquier estado de focus, active o selección del navegador */
+#themeBtn:focus,
+#themeBtn:active,
+#themeBtn:focus-visible {
+    outline: none !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    transform: none !important;
+    box-shadow: none !important;
 }
 
 #themeBtn::before,
 #themeBtn::after {
     content: none !important;
     display: none !important;
+}
+
+/* Fuerza a que cualquier ripple creado por el JS dentro de este botón sea invisible */
+#themeBtn .ripple {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    animation: none !important;
 }
 
 /* =========================
